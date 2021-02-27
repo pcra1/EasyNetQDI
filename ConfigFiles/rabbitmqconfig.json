@@ -1,0 +1,9 @@
+{
+    "rabbitMqConfig": {
+        "Username": "egm",
+        "Password": "IGTtest1",
+        "Host": "localhost",
+        "VirtualHost": "/",
+        "HostPort": 5672
+    }
+}
