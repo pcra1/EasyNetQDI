@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package EasyNetQDI.protobuf;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+message TestMessageRequest
+{
+    string item_1 = 1;
+    int32 item_2 = 2;
+    google.protobuf.Any item_3 = 3;
+    google.protobuf.Timestamp item_4 = 4;
+}
+
+message TestMessageResponse
+{
+    string item_1 = 1;
+    int32 item_2 = 2;
+    google.protobuf.Any item_3 = 3;
+    google.protobuf.Timestamp item_4 = 4; 
+}

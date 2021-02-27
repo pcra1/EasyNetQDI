@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Common;
+using EasyNetDIServer.Responders;
 using EasyNetQ;
 using EasyNetQBus;
 using HealthChecks.UI.Client;
@@ -32,6 +33,9 @@ namespace EasyNetDIServer
             services.AddRabbitMqConfiguration(Configuration);
             services.AddSingleton<IBus>(provider =>
                 BusBuilder.CreateMessageBus(provider.GetRequiredService<RabbitMqConfiguration>()));
+
+            services.AddSingleton<Responder>();
+            services.AddScoped<IResponder, TestMessageResponder>();
 
             services.AddCors();
             services.AddHealthChecks()

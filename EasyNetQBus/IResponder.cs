@@ -1,4 +1,7 @@
-$HEADER$namespace $NAMESPACE$
+namespace EasyNetQBus
 {
-  public interface $INTERFACE$ {$END$}
+    public interface IResponder
+    {
+        void SubscribeAsync();
+    }
 }

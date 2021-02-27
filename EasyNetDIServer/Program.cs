@@ -57,8 +57,7 @@ namespace EasyNetDIServer
                     configurationBuilder.SetBasePath(Directory.GetCurrentDirectory());
                     configurationBuilder.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
-                        .AddJsonFile("ConfigFiles\\databaseconfig.json", optional: false, reloadOnChange: false)
-                        .AddJsonFile("ConfigFiles\\rabbitmqconfig.json", optional: false, reloadOnChange: false);
+                        .AddJsonFile("ConfigFiles/rabbitmqconfig.json", optional: false, reloadOnChange: false);
                 })
                 .ConfigureServices((context, services) =>
                 {

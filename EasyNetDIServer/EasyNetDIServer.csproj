@@ -5,8 +5,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\EasyNetQBus\EasyNetQBus.csproj" />
-      <ProjectReference Include="..\..\ProtobufMessages\ProtobufMessages.csproj" />
+      <ProjectReference Include="..\EasyNetQBus\EasyNetQBus.csproj" />
+      <ProjectReference Include="..\ProtobufMessages\ProtobufMessages.csproj" />
+      <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\EasyNetQBus\EasyNetQBus.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -19,6 +21,12 @@
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
       <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
       <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+    <Content Include="..\ConfigFiles\rabbitmqconfig.json" Link="ConfigFiles/rabbitmqconfig.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     </ItemGroup>
 
 </Project>
